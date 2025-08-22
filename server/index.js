@@ -5,6 +5,7 @@ const noteRouter = require("./routers/notes");
 const cookieParser = require("cookie-parser");
 const cors = require("cors");
 const path = require("path");
+const helmet = require("helmet")
 require("dotenv").config();
 
 const app = express();
