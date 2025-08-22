@@ -8,6 +8,13 @@ const path = require("path");
 require("dotenv").config();
 
 const app = express();
+app.use(
+	helmet({
+		hidePoweredBy: true,
+		noSniff: true,
+		xssFilter: true,
+	})
+);
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
